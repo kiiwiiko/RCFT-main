@@ -7,89 +7,88 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 
 @Document
-    public class Persona {
+public class Persona {
+    @Id
+    private String id;
 
-        @Id
-        private String id;
-        @Indexed(name = "cedula", unique = true)
-        private String cedula;
-        private String nombre;
-        private LocalDate fechaNacimiento;
-        private String lugarNacimiento;
-        private String estadoCivil;
-        private String profesion;
+    @Indexed(name="cedula",unique = true)
+    private String cedula;
 
-        // Constructor
-        public Persona(String cedula, String nombre, LocalDate fechaNacimiento,
-                       String lugarNacimiento, String estadoCivil, String profesion) {
-            this.cedula = cedula;
-            this.nombre = nombre;
-            this.fechaNacimiento = fechaNacimiento;
-            this.lugarNacimiento = lugarNacimiento;
-            this.estadoCivil = estadoCivil;
-            this.profesion = profesion;
-        }
+    private String nombre;
+    private String apellido;
+    private String fechaNacimiento;
+    private String direccion;
+    private String telefono;
 
-        public Persona() {}
-
-        // Getters
-        public String getCedula() {
-            return cedula;
-        }
-
-        public String getNombre() {
-            return nombre;
-        }
-
-        public LocalDate getFechaNacimiento() {
-            return fechaNacimiento;
-        }
-
-        public String getLugarNacimiento() {
-            return lugarNacimiento;
-        }
-
-        public String getEstadoCivil() {
-            return estadoCivil;
-        }
-
-        public String getProfesion() {
-            return profesion;
-        }
-
-        // Setters
-        public void setCedula(String cedula) {
-            this.cedula = cedula;
-        }
-
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
-        }
-
-        public void setFechaNacimiento(LocalDate fechaNacimiento) {
-            this.fechaNacimiento = fechaNacimiento;
-        }
-
-        public void setLugarNacimiento(String lugarNacimiento) {
-            this.lugarNacimiento = lugarNacimiento;
-        }
-
-        public void setEstadoCivil(String estadoCivil) {
-            this.estadoCivil = estadoCivil;
-        }
-
-        public void setProfesion(String profesion) {
-            this.profesion = profesion;
-        }
-        @Override
-        public String toString() {
-            return "Persona " +
-                    "Cédula=" + cedula  +
-                    ", Nombre=" + nombre  +
-                    ", Fecha de Nacimiento=" + (fechaNacimiento != null ? fechaNacimiento.toString() : "N/A") +
-                    ", Lugar de Nacimiento=" + lugarNacimiento  +
-                    ", Estado Civil=" + estadoCivil  +
-                    ", Profesión=" + profesion
-                    ;
+    public Persona() {
     }
+
+    public Persona(String cedula, String nombre, String apellido, String fechaNacimiento, String direccion, String telefono) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+        this.telefono = telefono;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    // Getters y setters
+
+
+}

@@ -1,7 +1,6 @@
 package com.example.application.views.accion;
 
 import com.example.application.views.MainLayout;
-import com.example.application.views.agregarciudadano.AgregarCiudadanoView;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -48,7 +47,7 @@ public class AccionView extends Composite<VerticalLayout> {
         buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         buttonPrimary.addClickListener(e -> {
             buttonPrimary.getUI().ifPresent(ui ->
-                    ui.navigate("Agregar-Ciudadano"));
+                    ui.navigate("agregar-persona"));
         });
         buttonPrimary2.setText("Lista de Ciudadanos");
         layoutColumn2.setAlignSelf(FlexComponent.Alignment.CENTER, buttonPrimary2);
@@ -57,7 +56,7 @@ public class AccionView extends Composite<VerticalLayout> {
         buttonPrimary2.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         buttonPrimary2.addClickListener(e -> {
             buttonPrimary2.getUI().ifPresent(ui ->
-                    ui.navigate("Lista-Personas"));
+                    ui.navigate("lista-personas"));
         });
 
         getContent().add(h2);

@@ -1,7 +1,8 @@
 package com.example.application.views;
 
 import com.example.application.views.accion.AccionView;
-import com.example.application.views.agregarciudadano.AgregarCiudadanoView;
+
+import com.example.application.views.agregarciudadano.AgregarPersonaView;
 import com.example.application.views.listaPersonas.ListaPersonasView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -51,7 +52,7 @@ public class MainLayout extends AppLayout {
         SideNav nav = new SideNav();
 
         nav.addItem(new SideNavItem("Accion", AccionView.class, LineAwesomeIcon.PENCIL_RULER_SOLID.create()));
-        nav.addItem(new SideNavItem("Agregar Ciudadano", AgregarCiudadanoView.class,
+        nav.addItem(new SideNavItem("Agregar Ciudadano", AgregarPersonaView.class,
                 LineAwesomeIcon.PENCIL_RULER_SOLID.create()));
         nav.addItem(new SideNavItem("Ver Ciudadanos", ListaPersonasView.class,
                 LineAwesomeIcon.PENCIL_RULER_SOLID.create()));

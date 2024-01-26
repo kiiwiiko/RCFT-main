@@ -7,5 +7,6 @@ public interface PersonaRepository extends MongoRepository<Persona, String> {
     public Persona findByCedula(String cedula);
     public  Persona findByNombre(String nombre);
     public Persona findByCedulaAndNombre(String cedula, String nombre);
+    void deleteByCedula(String cedula);
 
 }
