@@ -1,0 +1,6 @@
+@import url('./main-layout.css');
+@import url('./views/accion-view.css');
+@import url('./views/agregar-ciudadano-view.css');
+@import url('./views/buscar-ciudadano-view.css');
+@import url('./views/ver-ciudadanos-view.css');
+@import url('./views/imprimir-certificado-view.css');
